@@ -1,0 +1,34 @@
+.sidebar{
+    background-color: var(--color-primary-dark);
+    grid-column: sidebar-start/sidebar-end;
+    grid-row: 1/-1;
+    display: grid;
+    justify-items: center;
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        justify-content: end;
+        align-items: center;
+      }
+}
+.nav-btn{
+    border: none;
+    width: 4.5rem;
+    height: 2px;
+    background-color: #fff;
+    margin-top:3rem;
+    &::after,
+    &::before{
+        display: block;
+        content: "";
+        width: 4.5rem;
+        height: 2px;
+        background-color: #fff;
+    }
+    &::before{ transform: translateY(1rem); -webkit-transform: translateY(1rem); -moz-transform: translateY(1rem); -ms-transform: translateY(1rem); -o-transform: translateY(1rem); }
+    &::after{ transform: translateY(-1em); -webkit-transform: translateY(-1em); -moz-transform: translateY(-1em); -ms-transform: translateY(-1em); -o-transform: translateY(-1em); }
+    @media only screen and (max-width: $bp-large) {
+        margin-top: 0;
+        margin-right: 3rem;
+      }
+}
